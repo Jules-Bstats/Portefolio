@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Accueil - Portfolio Jules Bouscaud{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Jules <br> Bouscaud</h1>
+
+    <p class="tagline">
+        Bienvenue sur mon portfolio ! Tout au long de mes études, j'ai eu l'occasion de travailler sur une multitude de projets 
+        statistiques, économétriques et data. La réalisation de ces projets m'a permis de développer un grand nombre de compétences diverses et
+        variées mobilisant également de nombreux outils et langages tels que R, Python, SQL, Power BI et bien d'autres. 
+    </p>
+</section>
+
+<section class="about-me">
+    <h2>Qui suis-je ?</h2>
+    <p class="about-text">
+        Je suis étudiant en Master 2 d'économétrie et statistique à l'IAE de Nantes. Passionné par l'analyse de données et la modélisation...
+    </p>
+    
+    <blockquote class="personal-note">
+        « Ce qui m'a mené vers la data, c'est cette envie de transformer des chiffres en décisions concrètes —
+        une curiosité née pendant mes études d'économétrie et confirmée projet après projet. »
+    </blockquote>
+</section>
+
+
+
+<section class="projects-preview">
+    <span class="section-eyebrow">Sélection</span>
+    <h2>Mes projets phares</h2>
+    <p class="section-text">
+        Une sélection des travaux les plus aboutis de mon parcours — de l'analyse exploratoire à la modélisation prédictive.
+    </p>
+</section>
+
+<div class="carousel" id="carousel">
+    <button class="carousel-arrow carousel-arrow-left" id="prevBtn" aria-label="Projet précédent">&#8249;</button>
+
+    <div class="carousel-track" id="carouselTrack">
+        <a href="{{ url_for('projet_detail', slug='nuitees') }}" class="carousel-card" data-index="0">
+            <img src="{{ url_for('static', filename='img/projet1.jpg') }}" alt="Prévision des nuitées hôtelières">
+            <div class="carousel-card-body"><h3>Prévision des nuitées hôtelières</h3></div>
+        </a>
+
+        <a href="{{ url_for('projet_detail', slug='dashboard') }}" class="carousel-card" data-index="1">
+            <img src="{{ url_for('static', filename='img/projet2.jpg') }}" alt="Dashboard Power BI">
+            <div class="carousel-card-body"><h3>Dashboard Power BI</h3></div>
+        </a>
+
+        <a href="{{ url_for('projet_detail', slug='Analyse2') }}" class="carousel-card" data-index="2">
+            <img src="{{ url_for('static', filename='img/projet3.jpg') }}" alt="Analyse de données immobilier">
+            <div class="carousel-card-body">
+                <h3>EDA immobilier</h3></div>
+        </a>
+    </div>
+
+    <button class="carousel-arrow carousel-arrow-right" id="nextBtn" aria-label="Projet suivant">&#8250;</button>
+</div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+{% endblock %}

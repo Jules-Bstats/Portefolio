@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Projets - Portfolio Jules Bouscaud{% endblock %}
+
+{% block content %}
+
+<section class="projects-header">
+    <h1>Projets réalisés</h1>
+</section>
+
+<section class="projects-intro">
+    <p>
+        Au cours de mon cursus universitaire, j'ai réalisé de nombreux projets autour de la data :
+        analyse, prévision, nettoyage de données, data visualisation... avec une panoplie d'outils
+        différents. Voici une sélection des travaux les plus aboutis.
+    </p>
+</section>
+
+
+<!-- filtre compétences 
+<div class="skills-filter" id="skillsFilter">
+    <button class="skill-badge skill-all active" data-filter="all">Tous</button>
+    <button class="skill-badge skill-r" data-filter="r">R</button>
+    <button class="skill-badge skill-python" data-filter="python">Python</button>
+    <button class="skill-badge skill-sql" data-filter="sql">SQL</button>
+    <button class="skill-badge skill-powerbi" data-filter="powerbi">Power BI</button>
+    <button class="skill-badge skill-binome" data-filter="binome">Binôme</button>
+    <button class="skill-badge skill-equipe" data-filter="equipe">Équipe</button>
+    <button class="skill-badge skill-solo" data-filter="solo">Solo</button>
+</div>
+
+-->
+
+<!-- Famille 1 : Analyse et exploration -->
+<section class="project-family" data-family="analyse">
+    <h2 class="family-title">Analyse & exploration de données</h2>
+    <div class="project-grid">
+        <a href="{{ url_for('projet_detail', slug='Nettoyage') }}" id="Nettoyage" class="showcase-card project-card" data-skills="r solo">
+            <img src="{{ url_for('static', filename='img/projet-analyse1.jpg') }}" alt="Nettoyage et exploration de données">
+            <div class="showcase-card-body">
+                <h3>Nettoyage et exploration d'un jeu de données</h3>
+            </div>
+        </a>
+    
+        <a href="{{ url_for('projet_detail', slug='Analyse2') }}" id="Analyse2" class="showcase-card project-card" data-skills="r solo">
+            <img src="{{ url_for('static', filename='img/projet4.jpg') }}" alt="Analyse de data">
+            <div class="showcase-card-body">
+                <h3>Analyse</h3>
+            </div>
+        </a>
+
+        
+    </div>
+</section>
+
+<!-- Famille 2 : Prévision -->
+<section class="project-family" data-family="prevision">
+    <h2 class="family-title">Prévision</h2>
+    <div class="project-grid">
+        <a href="{{ url_for('projet_detail', slug='nuitees') }}" id="nuitees" class="showcase-card project-card" data-skills="r binome">
+            <img src="{{ url_for('static', filename='img/projet1.jpg') }}" alt="Prévision des nuitées hôtelières">
+            <div class="showcase-card-body">
+                <h3>Prévision des nuitées hôtelières</h3>
+            </div>
+        </a>
+
+        <a href="{{ url_for('projet_detail', slug='brocolis') }}" id="brocolis" class="showcase-card project-card" data-skills="r binome">
+            <img src="{{ url_for('static', filename='img/projet5.jpg') }}" alt="Prévision du prix du brocoli">
+            <div class="showcase-card-body">
+                <h3>Prévision du prix du brocoli </h3>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Famille 3 : Data visualisation -->
+<section class="project-family" data-family="visualisation">
+    <h2 class="family-title">Data visualisation</h2>
+    <div class="project-grid">
+        <a href="{{ url_for('projet_detail', slug='dashboard') }}" id="dashboard" class="showcase-card project-card" data-skills="powerbi solo">
+            <img src="{{ url_for('static', filename='img/projet2.jpg') }}" alt="Dashboard Power BI">
+            <div class="showcase-card-body">
+                <h3>Dashboard Power BI</h3>
+            </div>
+        </a>
+
+        <a href="#" class="showcase-card project-card" data-skills="python r">
+            <img src="{{ url_for('static', filename='img/projet-viz2.jpg') }}" alt="Visualisations interactives">
+            <div class="showcase-card-body">
+                <h3>Visualisations interactives</h3>
+            </div>
+        </a>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/projets.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}{{ project.title }} - Portfolio Jules Bouscaud{% endblock %}
+
+{% block content %}
+<div class="project-detail-layout">
+
+    <div class="project-main">
+        <a href="{{ url_for('projets') }}" class="back-link">
+            <span class="back-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            
+        </a>
+
+        <header class="project-header">
+            <h1>{{ project.title }}</h1>
+            <p class="project-date">{{ project.date }}</p>
+        </header>
+
+        <section class="resume-flex">
+            <div class="resume-text">
+                <p>{{ project.summary }}</p>
+            </div>
+            <div class="resume-image">
+                <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+            </div>
+        </section>
+
+        <section class="skills-static">
+            <h2>Compétences travaillées</h2>
+            <div class="skills-badges">
+                {% for skill in project.skills %}
+                    <span class="skill-badge skill-{{ skill }} static">{{ skill|capitalize }}</span>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="comment-box">
+            <h2>Commentaire</h2>
+            <p>{{ project.comment }}</p>
+        </section>
+    </div>
+
+    <aside class="data-box">
+        <h3>Data</h3>
+        <dl>
+            <dt>Origine</dt>
+            <dd>{{ project.data_origin }}</dd>
+
+            <dt>Source</dt>
+            <dd>{{ project.data_source }}</dd>
+        </dl>
+        <a href="{{ project.data_link }}" target="_blank" class="download-btn">Télécharger les données</a>
+    </aside>
+
+</div>
+{% endblock %}

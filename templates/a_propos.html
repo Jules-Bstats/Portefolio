@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block title %}À propos - Portfolio Jules Bouscaud{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+    <h2>Compétences</h2>
+    <h3 class="skills-subtitle">Langages & outils</h3>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-card-header">
+                <img src="https://cdn.simpleicons.org/r/6230F0" alt="" class="skill-logo">
+                <h4>R</h4>
+            </div>
+            <div class="skill-packages">
+                <span class="package-badge"><img src="https://cdn.simpleicons.org/tidyverse/4E5966" alt="">tidyverse</span>
+                <span class="package-badge">Shiny</span>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-card-header">
+                <img src="https://cdn.simpleicons.org/python/6230F0" alt="" class="skill-logo">
+                <h4>Python</h4>
+            </div>
+            <div class="skill-packages">
+                <span class="package-badge"><img src="https://cdn.simpleicons.org/flask/4E5966" alt="">Flask</span>
+                <span class="package-badge"><img src="https://cdn.simpleicons.org/pandas/4E5966" alt="">Pandas</span>
+                <span class="package-badge"><img src="https://cdn.simpleicons.org/numpy/4E5966" alt="">NumPy</span>
+                <span class="package-badge"><img src="https://cdn.simpleicons.org/scikitlearn/4E5966" alt="">scikit-learn</span>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-card-header">
+                <img src="https://cdn.simpleicons.org/postgresql/6230F0" alt="" class="skill-logo">
+                <h4>SQL</h4>
+            </div>
+        </div>
+
+        <div class="skill-card">
+    <div class="skill-card-header">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-logo skill-logo-fallback">
+            <rect x="3.5" y="10" width="4" height="10.5" rx="1" fill="currentColor"/>
+            <rect x="10" y="4.5" width="4" height="16" rx="1" fill="currentColor"/>
+            <rect x="16.5" y="13" width="4" height="7.5" rx="1" fill="currentColor"/>
+        </svg>
+        <h4>Power BI</h4>
+    </div>
+</div>
+
+<div class="skill-card">
+    <div class="skill-card-header">
+        <img src="https://cdn.simpleicons.org/qgis/6230F0" alt="" class="skill-logo">
+        <h4>QGIS</h4>
+    </div>
+        </div>
+
+<div class="skill-card">
+    <div class="skill-card-header">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-logo">
+            <path d="M8 8L3.5 12L8 16M16 8L20.5 12L16 16" stroke="#6230F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.5 5.5L10.5 18.5" stroke="#6230F0" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <h4>Langages web</h4>
+    </div>
+    <div class="skill-packages">
+        <span class="package-badge">HTML</span>
+        <span class="package-badge">CSS</span>
+    </div>
+</div>
+            </div>
+
+<h3 class="skills-subtitle">Savoir-faire techniques</h3>
+<div class="competencies-list">
+    <span class="competency-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6" cy="6" r="2.2" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="18" cy="6" r="2.2" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="12" cy="18" r="2.2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M7.8 7.4L11 16M16.2 7.4L13 16M8.2 6H15.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Modélisation statistique
+    </span>
+    <span class="competency-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 17L9.5 11L13.5 14.5L20 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.5 7H20V12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Prévision
+    </span>
+    <span class="competency-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 5H20L14 12.5V18L10 20V12.5L4 5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Traitement de données
+    </span>
+    <span class="competency-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="13" width="3" height="6" rx="0.6" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="9" y="9" width="3" height="10" rx="0.6" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="16.5" cy="10.5" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M18.7 12.7L21 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Analyse de données
+    </span>
+</div>
+</section>
+
+
+
+<section class="about-section">
+    <h2>CV</h2>
+    <a href="{{ url_for('static', filename='docs/cv.pdf') }}" class="download-btn cv-download" download>
+        Télécharger mon CV
+    </a>
+</section>
+
+
+<section class="about-section">
+    <h2>Parcours</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="timeline-date">2024 — 2026</span>
+            <h3>Master Économétrie & Statistique</h3>
+            <p>Spécialisation en modélisation statistique et prévision, projet de mémoire sur la prévision des nuitées hôtelières en France.</p>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-date">2023 — 2024</span>
+            <h3>Licence 3 Économétrie</h3>
+            <p>Fondamentaux en statistique appliquée, économie et premiers projets en R et Python.</p>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-date">2021 — 2023</span>
+            <h3>Licence Économie</h3>
+            <p>Bases en analyse économique et quantitative.</p>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/apropos.js') }}"></script>
+{% endblock %}
