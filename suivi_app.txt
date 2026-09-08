@@ -1,0 +1,4 @@
+MODIFICATIONS À APPORTER : 
+- ajouter une vignette stata 
+- reprendre l'esthétique global de l'app 
+-  

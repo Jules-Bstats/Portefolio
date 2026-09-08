@@ -6,8 +6,9 @@
 <section class="about-section">
     <h2>Compétences</h2>
     <h3 class="skills-subtitle">Langages & outils</h3>
+    
+    <div class="skills-grid">  
 
-    <div class="skills-grid">
         <div class="skill-card">
             <div class="skill-card-header">
                 <img src="https://cdn.simpleicons.org/r/6230F0" alt="" class="skill-logo">
@@ -55,7 +56,7 @@
         <img src="https://cdn.simpleicons.org/qgis/6230F0" alt="" class="skill-logo">
         <h4>QGIS</h4>
     </div>
-        </div>
+</div>
 
 <div class="skill-card">
     <div class="skill-card-header">
@@ -70,7 +71,19 @@
         <span class="package-badge">CSS</span>
     </div>
 </div>
-            </div>
+
+<div class="skill-card">
+    <div class="skill-card-header">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-logo skill-logo-fallback">
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M6.5 15L9.5 10.5L12.5 13L17.5 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="17.5" cy="7" r="1.1" fill="currentColor"/>
+        </svg>
+        <h4>Stata</h4>
+    </div>
+</div>
+
+</div>
 
 <h3 class="skills-subtitle">Savoir-faire techniques</h3>
 <div class="competencies-list">
@@ -112,8 +125,8 @@
 
 <section class="about-section">
     <h2>CV</h2>
-    <a href="{{ url_for('static', filename='docs/cv.pdf') }}" class="download-btn cv-download" download>
-        Télécharger mon CV
+    <a href="{{ url_for('static', filename='docs/cv.pdf') }}" class="download-btn cv-download" target="_blank" rel="noopener">
+    Télécharger mon CV
     </a>
 </section>
 
@@ -122,19 +135,16 @@
     <h2>Parcours</h2>
     <div class="timeline">
         <div class="timeline-item">
-            <span class="timeline-date">2024 — 2026</span>
-            <h3>Master Économétrie & Statistique</h3>
-            <p>Spécialisation en modélisation statistique et prévision, projet de mémoire sur la prévision des nuitées hôtelières en France.</p>
+            <span class="timeline-date">2025 — 2027</span>
+            <h3>Master ECAP - mention économétrie-statistiques - Université de Nantes</h3>
+            <p>Maitrise des outils informatiques pour le traitement de la data. <br>
+               Éconmétrie, série temporelle, machine learning, SQL.
+            </p>
         </div>
         <div class="timeline-item">
-            <span class="timeline-date">2023 — 2024</span>
-            <h3>Licence 3 Économétrie</h3>
-            <p>Fondamentaux en statistique appliquée, économie et premiers projets en R et Python.</p>
-        </div>
-        <div class="timeline-item">
-            <span class="timeline-date">2021 — 2023</span>
-            <h3>Licence Économie</h3>
-            <p>Bases en analyse économique et quantitative.</p>
+            <span class="timeline-date">2022 — 2025</span>
+            <h3>Double licence mathématiques-éconmie - Université d'Angers</h3>
+            <p>Algèbre linéaire, statistiques inférentielles, microéconomie, macroéconomie, économétrie et analyse de données.</p>
         </div>
     </div>
 </section>
