@@ -36,8 +36,8 @@ a { color: inherit; text-decoration: none; }
     top: 1.2rem;
     left: 50%;
     transform: translateX(-50%);
-    width: min(900px, 92%);
-    height: 56px;
+    width: min(1300px, 92%);
+    height: 90px;
     background-color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 999px;
@@ -71,6 +71,7 @@ a { color: inherit; text-decoration: none; }
     display: flex;
     align-items: center;
     gap: 1.8rem;
+    white-space: nowrap; /* empêche "À propos de moi" de passer à la ligne */
 }
 
 .navbar-links a {
@@ -132,6 +133,18 @@ a { color: inherit; text-decoration: none; }
     transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
+/* Palier intermédiaire : resserre l'espacement avant le passage en menu mobile,
+   pour éviter que "À propos de moi" empiète sur le pill de statut */
+@media (max-width: 920px) {
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .navbar-links a {
+        font-size: 0.82rem;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-links {
         display: none;
@@ -172,20 +185,17 @@ a { color: inherit; text-decoration: none; }
     }
 }
 
-
-
 @keyframes pulse {
     0%, 100% { box-shadow: 0 0 0 0 rgba(31, 95, 82, 0.4); }
     50% { box-shadow: 0 0 0 6px rgba(31, 95, 82, 0); }
 }
 
 
-
 /* ---------- Main content ---------- */
 
 main {
-    padding: 6rem 2rem 6.5rem;
-    max-width: 900px;
+    padding: 6rem 3rem 6.5rem; /* Augmentation des marges latérales pour aérer l'affichage */
+    max-width: 1300px;         /* Augmenté de 900px à 1300px pour élargir l'application */
     margin: 0 auto;
     min-height: calc(100vh - 140px);
 }
@@ -208,7 +218,7 @@ main {
 
 .hero p.tagline {
     font-size: 1.05rem;
-    text-align: justify;
+    text-align: left;
     color: var(--color-ink-soft);
     margin-bottom: 2.5rem;
 } 
