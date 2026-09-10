@@ -3,7 +3,6 @@
 
 :root {
     --color-ink: #1B222A;
-    --color-ink-soft: #4E5966;
     --color-border: rgba(0, 0, 0, 0.12);
     --color-teal: #6230F0;
     --color-card-bg: #FFFFFF;
@@ -96,7 +95,7 @@ a { color: inherit; text-decoration: none; }
     border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     flex-shrink: 0;
     white-space: nowrap;
 }
@@ -218,8 +217,8 @@ main {
 
 .hero p.tagline {
     font-size: 1.05rem;
-    text-align: left;
-    color: var(--color-ink-soft);
+    text-align: center;
+    color: var(--color-ink);
     margin-bottom: 2.5rem;
 } 
 
@@ -247,7 +246,7 @@ main {
 .about-me .about-text {
     font-size: 1.05rem;
     text-align: justify;
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -342,7 +341,7 @@ main {
     height: 46px;
     font-size: 1.6rem;
     line-height: 1;
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     cursor: pointer;
     z-index: 4;
     display: flex;
@@ -396,8 +395,8 @@ main {
 
 .projects-preview .section-text {
     font-size: 1.02rem;
-    color: var(--color-ink-soft);
-    max-width: 560px;
+    color: var(--color-ink);
+    
 }
 /* ---------- Showcase cards ---------- */
 
@@ -413,29 +412,31 @@ main {
     border: 1px solid var(--color-border);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     display: block;
 }
 
 .showcase-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(27, 34, 42, 0.12);
+    border-color: var(--color-teal);
 }
+
 
 .showcase-card img {
     width: 100%;
-    height: 150px;
+    height: 190px;
     object-fit: cover;
     display: block;
 }
 
 .showcase-card-body {
-    padding: 1rem 1.1rem 1.2rem;
+    padding: 1.1rem 1.2rem 1.3rem;
     text-align: center;
 }
 
 .showcase-card h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--color-ink);
 }
@@ -502,7 +503,7 @@ main {
     height: 40px;
     border-radius: 50%;
     border: 1px solid var(--color-border);
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     background-color: #FFFFFF;
     transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
@@ -552,7 +553,7 @@ main {
     border-radius: 50%;
     background-color: #FFFFFF;
     border: 1px solid var(--color-border);
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     box-shadow: 0 3px 10px rgba(27, 34, 42, 0.1);
     display: flex;
     align-items: center;
@@ -581,24 +582,25 @@ main {
 /* ---------- Page Projets ---------- */
 
 .projects-header {
-    text-align: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    text-align: left;
     margin-bottom: 2.5rem;
 }
 
 .projects-intro {
-    text-align: justify;
-    max-width: 640px;
-    margin: 0 auto 2.5rem;
+    text-align: center;
+    
 }
 
 .projects-intro h1 {
     font-weight: 700;
-    font-size: clamp(2rem, 4.5vw, 2.6rem);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);   /* était clamp(2rem, 4.5vw, 2.6rem) */
     margin-bottom: 1rem;
 }
 
+
 .projects-intro p {
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     font-size: 1.02rem;
 }
 
@@ -651,7 +653,8 @@ main {
 }
 
 .family-title {
-    font-size: 1.3rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.2rem;
     padding-bottom: 0.5rem;
@@ -692,7 +695,7 @@ main {
 }
 
 .project-date {
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     font-size: 0.95rem;
     margin-top: 0.3rem;
 }
@@ -705,7 +708,7 @@ main {
 }
 
 .resume-text p {
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     line-height: 1.7;
     text-align: justify;
 }
@@ -748,7 +751,7 @@ main {
 }
 
 .comment-box p {
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     line-height: 1.7;
 }
 
@@ -773,7 +776,7 @@ main {
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     margin-top: 0.8rem;
 }
 
@@ -820,7 +823,7 @@ main {
     margin-bottom: 2rem;
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     background-color: #FFFFFF;
     border: 1px solid var(--color-border);
     border-radius: 999px;
@@ -865,7 +868,7 @@ main {
 
 .about-section h2 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.3rem;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
     font-weight: 600;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
@@ -930,7 +933,7 @@ main {
 }
 
 .timeline-item p {
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     font-size: 0.92rem;
     line-height: 1.6;
 }
@@ -1009,7 +1012,7 @@ main {
     background-color: #FFFFFF;
     font-size: 0.78rem;
     font-weight: 500;
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     transition: transform 0.15s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -1104,7 +1107,7 @@ main {
 
 .search-box li {
     font-size: 0.95rem;
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     padding-left: 1.3rem;
     position: relative;
 }
