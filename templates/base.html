@@ -24,10 +24,8 @@
         <a href="{{ url_for('a_propos') }}">À propos de moi</a>
     </nav>
 
-    <span class="navbar-status">
-        <span class="status-dot"></span>
-        <span>À la recherche d'un stage dans la data</span>
-    </span>
+    <!-- Bouton CV principal (remplace la pastille "À la recherche de stage" sur desktop) -->
+    <a href="{{ url_for('static', filename='docs/cv.pdf') }}" class="navbar-download-btn" download="Mon_CV.pdf">Mon CV</a>
 
     <button class="navbar-mobile-toggle" id="navbarMobileToggle" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
