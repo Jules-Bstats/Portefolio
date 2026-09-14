@@ -4,9 +4,22 @@ app = Flask(__name__)
 
 PROJECTS = {
     "nuitees": {
-        "title": "Prévision des nuitées hôtelières",
-        "date": "Septembre 2025",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "title": "Prévision de la fréquentation touristique en France",
+        "date": "juin 2026",
+        "summary": """ Cette étude a pour objectif de déterminer le meilleur modèle de prévision les plus performants pour anticiper la fréquentation touristique en France à court terme, mesurée par le nombre de  nuitées en hôtellerie sur la période 2011-2025. Elle répond à deux questions : Quel modèle \n 
+permet de prévoir efficacement la fréquentation touristique en France à court terme ? Dans 
+quelle mesure l’intégration de variables conjoncturelles, compétitives et comportementales 
+permet-elle d’améliorer la qualité de ces prévisions ? Sept modèles ont été estimés, répartis en 
+et des modèles sur la tendance appliqués à la série corrigée des variations saisonnières 
+(SARIMA, ARIMAX, RLM). Après traitement des valeurs manquantes par lissage de Kalman 
+et désaisonnalisation par la méthode X13-ARIMA-SEATS, les prévisions de chaque modèle 
+sont évaluées sur l’année 2025 grâce à des indicateurs de qualité de prévision (RMSE, MAE, 
+MASE, MAPE) et au test statistique (Diebold-Mariano). Les résultats montrent que les modèles 
+de prévision saisonniers SARIMA et SARIMAX surpassent le modèle naïf saisonnier. 
+Cependant, aucun modèle sur la tendance ne parvient à faire mieux que les prévisions du modèle 
+naïf simple. L’intégration de variables exogènes (Covid, Prix relatif Lags 2 et Google Trends) 
+améliore les indicateurs de qualité sans que cette amélioration soit statistiquement significative.""",
+        
         "image": "img/projet1.jpg",
         "skills": ["r", "binome"],
         "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Autoévaluation : projet abouti, bonne maîtrise des modèles SARIMA, marge d'amélioration sur l'automatisation du pipeline.",
