@@ -5,28 +5,39 @@ app = Flask(__name__)
 PROJECTS = {
     "nuitees": {
         "title": "Prévision de la fréquentation touristique en France",
-        "date": "juin 2026",
-        "summary": """ Cette étude a pour objectif de déterminer le meilleur modèle de prévision les plus performants pour anticiper la fréquentation touristique en France à court terme, mesurée par le nombre de  nuitées en hôtellerie sur la période 2011-2025. Elle répond à deux questions : Quel modèle \n 
-permet de prévoir efficacement la fréquentation touristique en France à court terme ? Dans 
-quelle mesure l’intégration de variables conjoncturelles, compétitives et comportementales 
-permet-elle d’améliorer la qualité de ces prévisions ? Sept modèles ont été estimés, répartis en 
-et des modèles sur la tendance appliqués à la série corrigée des variations saisonnières 
-(SARIMA, ARIMAX, RLM). Après traitement des valeurs manquantes par lissage de Kalman 
-et désaisonnalisation par la méthode X13-ARIMA-SEATS, les prévisions de chaque modèle 
-sont évaluées sur l’année 2025 grâce à des indicateurs de qualité de prévision (RMSE, MAE, 
-MASE, MAPE) et au test statistique (Diebold-Mariano). Les résultats montrent que les modèles 
-de prévision saisonniers SARIMA et SARIMAX surpassent le modèle naïf saisonnier. 
-Cependant, aucun modèle sur la tendance ne parvient à faire mieux que les prévisions du modèle 
-naïf simple. L’intégration de variables exogènes (Covid, Prix relatif Lags 2 et Google Trends) 
-améliore les indicateurs de qualité sans que cette amélioration soit statistiquement significative.""",
-        
+        "date": "Juin 2026",
+        "summary": 
+                        """ Cette étude a pour objectif de déterminer le meilleur modèle de prévision les plus performants
+                pour anticiper la fréquentation touristique en France à court terme, mesurée par le nombre de 
+                nuitées en hôtellerie sur la période 2011-2025. Elle répond à deux questions : Quel modèle 
+                permet de prévoir efficacement la fréquentation touristique en France à court terme ? Dans 
+                quelle mesure l’intégration de variables conjoncturelles, compétitives et comportementales 
+                permet-elle d’améliorer la qualité de ces prévisions ? Sept modèles ont été estimés, répartis en 
+                deux groupes : des modèles saisonniers (SARIMA, ETS, ADAM ETS ARIMA, SARIMAX) 
+                et des modèles sur la tendance appliqués à la série corrigée des variations saisonnières 
+                (SARIMA, ARIMAX, RLM). Après traitement des valeurs manquantes par lissage de Kalman 
+                et désaisonnalisation par la méthode X13-ARIMA-SEATS, les prévisions de chaque modèle 
+                sont évaluées sur l’année 2025 grâce à des indicateurs de qualité de prévision (RMSE, MAE, 
+                MASE, MAPE) et au test statistique (Diebold-Mariano). 
+                """,
+        "summary_bottom": 
+                """Les résultats montrent que les modèles 
+                de prévision saisonniers SARIMA et SARIMAX surpassent le modèle naïf saisonnier. 
+                Cependant, aucun modèle sur la tendance ne parvient à faire mieux que les prévisions du modèle 
+                naïf simple. L’intégration de variables exogènes (Covid, Prix relatif Lags 2 et Google Trends) 
+                améliore les indicateurs de qualité sans que cette amélioration soit statistiquement significative.""", 
         "image": "img/projet1.jpg",
-        "skills": ["r", "binome"],
-        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Autoévaluation : projet abouti, bonne maîtrise des modèles SARIMA, marge d'amélioration sur l'automatisation du pipeline.",
-        "data_origin": "INSEE",
-        "data_source": "Fréquentation touristique départementale",
-        "data_link": "https://www.insee.fr/fr/statistiques"
+        "skills": ["R", "R-Shiny", "Série temporelle","Prévision"],
+        "comment": """
+                Ce travail de recherche m'a permis de développer mes compétences techniques (R, R-Shiny) et analytiques 
+                (modélisation, prévision ...). Ce fut également l'occasion de mener un projet avec des contraintes de temps et des consignes précises respectant les standards académiques.
+                Ce mémoire m'a permis synthétiser mes pensées pour faire comprendre mon travail à toute personne, même non spécialiste. 
+                """,
+        "data_origin": "INSEE, Google Trends",
+        "data_link": "https://github.com/Jules-Bstats/memoire/blob/main/data_memoire.csv"
     },
+
+
     "dashboard": {
         "title": "Dashboard Power BI",
         "date": "Mars 2025",
@@ -35,9 +46,12 @@ améliore les indicateurs de qualité sans que cette amélioration soit statisti
         "skills": ["powerbi", "solo"],
         "comment": "Lorem ipsum dolor sit amet. Autoévaluation : bonne prise en main de Power BI, à approfondir sur les mesures DAX complexes.",
         "data_origin": "Kaggle",
-        "data_source": "Retail Sales Dataset",
         "data_link": "https://www.kaggle.com"
     },
+
+
+
+
     "Nettoyage": {
             "title": "Nettoyage de données ",
             "date": "Septembre 2025",
@@ -46,9 +60,11 @@ améliore les indicateurs de qualité sans que cette amélioration soit statisti
             "skills": ["r", "binome"],
             "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Autoévaluation : projet abouti, bonne maîtrise des modèles SARIMA, marge d'amélioration sur l'automatisation du pipeline.",
             "data_origin": "INSEE",
-            "data_source": "Data",
             "data_link": "https://www.insee.fr/fr/statistiques"
         },
+
+
+
         "brocolis": {
                 "title": "Prévision du prix du brocoli aux USA",
                 "date": "Septembre 2025",
@@ -57,9 +73,12 @@ améliore les indicateurs de qualité sans que cette amélioration soit statisti
                 "skills": ["r", "binome"],
                 "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Autoévaluation : projet abouti, bonne maîtrise des modèles SARIMA, marge d'amélioration sur l'automatisation du pipeline.",
                 "data_origin": "FED",
-                "data_source": "Brocolis price",
                 "data_link": "https://www.insee.fr/fr/statistiques"
             },
+
+
+
+            
             "Analyse2": {
                     "title": "Analyse",
                     "date": "Septembre 2026",
@@ -68,7 +87,6 @@ améliore les indicateurs de qualité sans que cette amélioration soit statisti
                     "skills": ["r", "binome"],
                     "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Autoévaluation : projet abouti, bonne maîtrise des modèles SARIMA, marge d'amélioration sur l'automatisation du pipeline.",
                     "data_origin": "INSEE",
-                    "data_source": "Kaggle",
                     "data_link": "https://www.insee.fr/fr/statistiques"
                 }
 }

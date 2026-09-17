@@ -2,45 +2,33 @@
 {% block title %}Accueil - Portfolio Jules Bouscaud{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <h1>Jules Bouscaud</h1>
-
+<!-- Section Héro : Wide Left-Aligned -->
+<section class="hero-left-wide">
+    <h1 class="hero-title-center">Jules Bouscaud</h1>
+    
     <div class="hero-tags-row">
         <span class="hero-tag">🎓 Master Économétrie</span>
         <span class="hero-tag">💻 Stage Data</span>
         <span class="hero-tag">⏱️ 3 à 6 mois</span>
         <span class="hero-tag">📍 Nantes & Alentours</span>
     </div>
-<br>
-    <p class="tagline">
-        Cette application web est un portofolio interactif visant à mettre en avant mes compétences et les projets que j'ai réalisé au cours
-        de mes études. 
-    </p>
-</section>
-
-<section class="about-me">
-    <h2>Qui suis-je ?</h2>
-    <p class="about-text">
-        J'ai découvert l'économétrie et la data en licence de mathématiques-économie. 
-        Depuis, je continue d'approfondir mes connaissances dans ce domaine en Master d'économétrie et de statistiques à l'université de Nantes.
-        Actuellement sur ma deuxième année de Master, je suis à la recherche d'un <a href="{{ url_for('stage') }}" class="underline-hover">stage de fin d'études</a>   dans la data 
-        pour mettre en pratiques toutes les compétences que j'ai acquises au fils de mes études.
-
- </p>
     
-    <blockquote class="personal-note">
-        «J'aime transformer la données en informations exploitables afin de prendre des décisions optimales.»
-    </blockquote>
+    <div class="hero-text-container">
+        <p class="hero-intro-text">
+            Étudiant en master d'économétrie-statistiques à l'IAE de Nantes, j'ai conçu ce portfolio pour illustrer mes compétences analytiques à travers les projets que j'ai réalisés. Je suis actuellement à la recherche d'un stage de fin d'études pour mettre en pratique mon expertise technique au service de problématiques réelles.
+        </p>
+        
+        <blockquote class="hero-quote-left">
+            « Ce qui m'a mené vers la data, c'est cette envie de transformer des chiffres en décisions concrètes. »
+        </blockquote>
+    </div>
 </section>
-
-
 
 <section class="projects-preview">
     <span class="section-eyebrow">Sélection</span>
     <h2>Mes projets phares</h2>
     <p class="section-text">
-        Voici une petite sélection des principaux projets de ce portefolio. D'autres projets sont disponibles 
-        dans la section <a href="{{ url_for('projets') }}">Projets</a>. 
+        Une sélection des travaux les plus aboutis de mon parcours 
     </p>
 </section>
 
@@ -56,21 +44,18 @@
 
         <a href="{{ url_for('projet_detail', slug='dashboard') }}" class="carousel-card" data-index="1">
             <img src="{{ url_for('static', filename='img/projet2.jpg') }}" alt="Dashboard Power BI">
-            <div class="carousel-card-body"><h3>Dashboard opérationnel Power BI</h3></div>
+            <div class="carousel-card-body"><h3>Dashboard Power BI</h3></div>
         </a>
 
         <a href="{{ url_for('projet_detail', slug='Analyse2') }}" class="carousel-card" data-index="2">
             <img src="{{ url_for('static', filename='img/projet3.jpg') }}" alt="Analyse de données immobilier">
             <div class="carousel-card-body">
-                <h3>Analyse exploratoire sur les indicateurs économiques et démographiques</h3>
-            </div>
+                <h3>EDA immobilier</h3></div>
         </a>
     </div>
 
     <button class="carousel-arrow carousel-arrow-right" id="nextBtn" aria-label="Projet suivant">&#8250;</button>
 </div>
-
-
 
 {% endblock %}
 

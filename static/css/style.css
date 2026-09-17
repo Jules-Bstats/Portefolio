@@ -95,7 +95,7 @@ p {
    ========================================================================== */
 main {
     padding: 6rem 3rem 6.5rem; 
-    max-width: 1300px;         
+    max-width: 1440px;         
     margin: 0 auto;
     min-height: calc(100vh - 140px);
 }
@@ -292,12 +292,18 @@ main {
 .skill-badge:hover { transform: translateY(-2px); }
 .skill-badge.active { background-color: var(--skill-color); color: #FFFFFF; }
 
+/* R */ 
 .skill-r        { --skill-color: #2E5C8A; }
+.skill-r-shiny  { --skill-color: #2E5C8A; }
+
+
 .skill-python   { --skill-color: #B98900; }
 .skill-sql      { --skill-color: #6B4C9A; }
 .skill-powerbi  { --skill-color: #C1440E; }
-.skill-binome   { --skill-color: #3F7D63; }
-.skill-equipe   { --skill-color: #A83264; }
+
+/* Econométrie */ 
+.skill-prévision   { --skill-color: #3F7D63; }
+.skill-série-temporelle   { --skill-color: #59a832; }
 .skill-solo     { --skill-color: #55606B; }
 .skill-all      { --skill-color: var(--color-ink); }
 
@@ -419,7 +425,11 @@ main {
     cursor: pointer;
     transition: transform 0.45s ease, opacity 0.45s ease, box-shadow 0.45s ease;
 }
-.carousel-card img { height: 240px; object-fit: cover; }
+.carousel-card img { 
+    width: 100%;
+    height: 240px; 
+    object-fit: cover; 
+}
 .carousel-card-body { padding: 1.1rem 1.2rem 1.4rem; text-align: center; }
 
 .carousel-card.pos-center { transform: translate(-50%, -50%) scale(1); z-index: 3; opacity: 1; box-shadow: 0 20px 40px rgba(27, 34, 42, 0.18); }
@@ -512,18 +522,32 @@ main {
 /* --- PAGE DÉTAIL PROJET --- */
 .project-detail-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 7fr 3fr;
     gap: 3rem;
-    max-width: 1000px;
+    max-width: 100%; /* hérite de main, plus de plafond séparé */
     align-items: start;
 }
+
 .project-header { margin-bottom: 2rem; }
 .project-date { font-size: 0.95rem; margin-top: 0.3rem; }
 
 .resume-flex { display: flex; flex-direction: column; gap: 1.8rem; margin-bottom: 2.2rem; }
 .resume-text p { text-align: justify; }
-.resume-image { width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; border: 1px solid var(--color-border); }
-.resume-image img { height: 100%; object-fit: cover; }
+
+.resume-image { 
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px; 
+    overflow: hidden; 
+    border: 1px solid var(--color-border); 
+}
+.resume-image img { 
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 650px;
+}
 
 .skills-static { margin-bottom: 2.5rem; }
 .skills-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; }
@@ -539,6 +563,27 @@ main {
 .data-box dt { margin-top: 0.8rem; margin-bottom: 0; }
 .data-box dd { font-size: 0.95rem; font-weight: 500; margin-top: 0.15rem; }
 
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    background-color: var(--color-teal);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.comment-box {text-align: justify;
+}
+
+.download-btn:hover {
+    background-color: #8c5ff2;
+    transform: translateY(-2px);
+}
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -638,10 +683,10 @@ main {
 .footer-icons { display: flex; gap: 0.7rem; }
 .footer-icon {
     position: relative; display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--color-border);
+    width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--color-border);
     background-color: #FFFFFF; transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
-.footer-icon svg { width: 18px; height: 18px; }
+.footer-icon svg { width: 24px; height: 24px; }
 .footer-icon:hover { color: var(--color-teal); border-color: var(--color-teal); transform: translateY(-2px); }
 
 .footer-icon::after {
@@ -654,7 +699,7 @@ main {
 
 .scroll-top {
     position: fixed; right: 1.4rem; bottom: 5.2rem;
-    width: 40px; height: 40px; border-radius: 50%;
+    width: 46px; height: 46px; border-radius: 50%;
     background-color: #FFFFFF; border: 1px solid var(--color-border);
     box-shadow: 0 3px 10px rgba(27, 34, 42, 0.1);
     display: flex; align-items: center; justify-content: center;
@@ -663,4 +708,33 @@ main {
 }
 .scroll-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .scroll-top:hover { color: var(--color-teal); border-color: var(--color-teal); }
-.scroll-top svg { width: 18px; height: 18px; }
+.scroll-top svg { width: 21px; height: 21px; }
+
+
+.underline-hover {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.underline-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+.underline-hover:hover {
+    color: var(--color-teal);
+}
+
+.underline-hover:hover::after {
+    background-color: var(--color-teal);
+}
+
+.underline-hover:hover::after {
+    opacity: 1;
+}
