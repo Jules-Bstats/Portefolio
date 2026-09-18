@@ -31,21 +31,37 @@
 -->
 
 <!-- Famille 1 : Analyse et exploration -->
+
+
+<section class="project-family" data-family="analyse">
+
+    <h2 class="family-title">Econométrie</h2>
+    <div class="project-grid">
+        <a href="{{ url_for('projet_detail', slug='accident routier') }}" id="accident routier" class="showcase-card project-card" data-skills="r solo">
+            <img src="{{ url_for('static', filename='img/projet6.jpg') }}" alt="Analyse économétrique">
+            <div class="showcase-card-body">
+                <h3>Analyse économétrique du taux d'accidents de la route en France</h3>
+            </div>
+        </a> 
+    </div>
+</section>
+
+
 <section class="project-family" data-family="analyse">
 
     <h2 class="family-title">Analyse et exploration de données</h2>
     <div class="project-grid">
         <a href="{{ url_for('projet_detail', slug='Nettoyage') }}" id="Nettoyage" class="showcase-card project-card" data-skills="r solo">
-            <img src="{{ url_for('static', filename='img/projet-analyse1.jpg') }}" alt="Nettoyage et exploration de données">
+            <img src="{{ url_for('static', filename='img/projet3.jpg') }}" alt="Nettoyage et exploration de données">
             <div class="showcase-card-body">
-                <h3>Nettoyage et exploration d'un jeu de données</h3>
+                <h3>Traitement des valeurs manquantes : analyse de l'attractivité des métiers du numérique</h3>
             </div>
         </a>
     
-        <a href="{{ url_for('projet_detail', slug='Analyse2') }}" id="Analyse2" class="showcase-card project-card" data-skills="r solo">
+        <a href="{{ url_for('projet_detail', slug='Analyse  de donnees') }}" id="Analyse  de donnees" class="showcase-card project-card" data-skills="r solo">
             <img src="{{ url_for('static', filename='img/projet4.jpg') }}" alt="Analyse de data">
             <div class="showcase-card-body">
-                <h3>Analyse</h3>
+                <h3>Analyse des inégalités entre les pays du monde</h3>
             </div>
         </a>
 
@@ -84,10 +100,10 @@
             </div>
         </a>
 
-        <a href="#" class="showcase-card project-card" data-skills="python r">
-            <img src="{{ url_for('static', filename='img/projet-viz2.jpg') }}" alt="Visualisations interactives">
+        <a href="{{ url_for('projet_detail', slug='viz memoire') }}" id="viz memoire" class="showcase-card project-card" data-skills="python r">
+            <img src="{{ url_for('static', filename='img/projet7.jpg') }}" alt="Visualisations interactives">
             <div class="showcase-card-body">
-                <h3>Visualisations interactives</h3>
+                <h3>R-shiny : visualisation des prévisions de fréquentation touristique en France</h3>
             </div>
         </a>
     </div>

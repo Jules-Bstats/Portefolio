@@ -26,34 +26,61 @@
             <div class="resume-image">
                 <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
             </div>
+            <div class="resume-text">
+                <p>{{ project.summary_bottom }}</p>
+            </div>
         </section>
 
-        <section class="skills-static">
+                <section class="skills-static">
             <h2>Compétences travaillées</h2>
             <div class="skills-badges">
                 {% for skill in project.skills %}
-                    <span class="skill-badge skill-{{ skill }} static">{{ skill|capitalize }}</span>
+                    <span class="skill-badge skill-{{ skill|lower|replace(' ', '-') }} static">{{ skill }}</span>
                 {% endfor %}
             </div>
         </section>
 
-        <section class="comment-box">
+         <section class="comment-box">
             <h2>Commentaire</h2>
             <p>{{ project.comment }}</p>
         </section>
+
     </div>
 
-    <aside class="data-box">
-        <h3>Data</h3>
-        <dl>
-            <dt>Origine</dt>
-            <dd>{{ project.data_origin }}</dd>
 
-            <dt>Source</dt>
-            <dd>{{ project.data_source }}</dd>
-        </dl>
-        <a href="{{ project.data_link }}" target="_blank" class="download-btn">Télécharger les données</a>
-    </aside>
+
+    <aside class="data-box">
+    <h3>Fichiers et données</h3>
+    <dl>
+        {% if project.data_origin %}
+        <dt>Origine</dt>
+        <dd>{{ project.data_origin }}</dd>
+        {% endif %}
+
+        {% if project.data_source %}
+        <dt>Source</dt>
+        <dd>{{ project.data_source }}</dd>
+        {% endif %}
+    </dl>
+ <br>
+    {% if project.data_link %}
+    <a href="{{ project.data_link }}" target="_blank" class="download-btn">Télécharger les données</a>
+    {% endif %}
+
+    {% if project.project_file %}
+    <p class="data-box-label">Le projet</p>
+    <a href="{{ url_for('static', filename=project.project_file) }}" class="download-btn" download>
+        Télécharger le projet
+    </a>
+    {% endif %}
+
+    {% if project.synthesis_file %}
+    <p class="data-box-label">Note de synthèse</p>
+    <a href="{{ url_for('static', filename=project.synthesis_file) }}" class="download-btn" download>
+        Télécharger la note de synthèse
+    </a>
+    {% endif %}
+</aside>
 
 </div>
 {% endblock %}
