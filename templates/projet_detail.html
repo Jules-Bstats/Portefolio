@@ -62,17 +62,34 @@
         <dd>{{ project.data_source }}</dd>
         {% endif %}
     </dl>
- <br>
-    {% if project.data_link %}
-    <a href="{{ project.data_link }}" target="_blank" class="download-btn">Télécharger les données</a>
-    {% endif %}
 
-    {% if project.project_file %}
-    <p class="data-box-label">Le projet</p>
-    <a href="{{ url_for('static', filename=project.project_file) }}" class="download-btn" download>
-        Télécharger le projet
-    </a>
-    {% endif %}
+ {% if project.data_file or project.data_link %}
+<p class="data-box-label">Les données</p>
+
+{% if project.data_file %}
+<a href="{{ url_for('static', filename=project.data_file) }}" class="download-btn" download>
+    Télécharger les données
+</a>
+{% else %} 
+<a href="{{ project.data_link }}" class="download-btn" target="_blank" rel="noopener noreferrer">
+    Accéder à la base de données
+</a>
+{% endif %}
+{% endif %}
+
+    {% if project.project_file or project.project_link %}
+<p class="data-box-label">Le projet</p>
+
+{% if project.project_file %}
+<a href="{{ url_for('static', filename=project.project_file) }}" class="download-btn" download>
+    Télécharger le projet
+</a>
+{% else %}
+<a href="{{ project.project_link }}" class="download-btn" target="_blank" rel="noopener noreferrer">
+    Accéder au projet
+</a>
+{% endif %}
+{% endif %}
 
     {% if project.synthesis_file %}
     <p class="data-box-label">Note de synthèse</p>

@@ -18,7 +18,7 @@
 }
 
 /* ==========================================================================
-   STYLES DE BASE
+   RESET ET STYLES DE BASE
    ========================================================================== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -35,7 +35,7 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; height: auto; display: block; }
 
 /* ==========================================================================
-   TYPOGRAPHIE GLOBALE 
+   TYPOGRAPHIE GLOBALE (Harmonisation)
    ========================================================================== */
 h1, h2, h3, h4 {
     color: var(--color-ink);
@@ -303,33 +303,20 @@ main {
 .skill-badge:hover { transform: translateY(-2px); }
 .skill-badge.active { background-color: var(--skill-color); color: #FFFFFF; }
 
-/* --- Couleurs des compétences --- */
-
-/* Langages & outils */
+/* R */ 
 .skill-r        { --skill-color: #2E5C8A; }
 .skill-r-shiny  { --skill-color: #2E5C8A; }
+
+
+.skill-python   { --skill-color: #B98900; }
+.skill-sql      { --skill-color: #6B4C9A; }
 .skill-powerbi  { --skill-color: #C1440E; }
-.skill-dax      { --skill-color: #C1440E; }
 
-/* Économétrie & séries temporelles */
-.skill-mco                        { --skill-color: #6B4C9A; }
-.skill-économétrie-quantitative   { --skill-color: #6B4C9A; }
-.skill-série-temporelle           { --skill-color: #59A832; }
-.skill-prévision                  { --skill-color: #3F7D63; }
-
-/* Préparation & exploration des données */
-.skill-imputation           { --skill-color: #0F766E; }
-.skill-nettoyage            { --skill-color: #0F766E; }
-.skill-analyse-exploratoire { --skill-color: #0E7490; }
-.skill-acp                  { --skill-color: #8A4B9E; }
-.skill-clustering           { --skill-color: #8A4B9E; }
-
-/* Visualisation */
-.skill-data-viz { --skill-color: #9A7200; }
-
-/* Badges non cliquables (pages projet) */
-.skill-badge.static { cursor: default; }
-.skill-badge.static:hover { transform: none; }
+/* Econométrie */ 
+.skill-prévision   { --skill-color: #3F7D63; }
+.skill-série-temporelle   { --skill-color: #59a832; }
+.skill-solo     { --skill-color: #55606B; }
+.skill-all      { --skill-color: var(--color-ink); }
 
 /* Badges petits (Packages & Savoir-faire) */
 .package-badge, .competency-badge {
@@ -674,14 +661,6 @@ main {
 .skill-packages { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
 .competencies-list { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
-
-/* Groupes de savoir-faire techniques */
-.competency-group { margin-top: 1.8rem; }
-.competency-group-title {
-    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--color-ink-soft); margin-bottom: 0.8rem;
-}
-.competency-group .competencies-list { margin-top: 0; }
 
 @media (max-width: 640px) { .skills-grid { grid-template-columns: 1fr; } }
 
