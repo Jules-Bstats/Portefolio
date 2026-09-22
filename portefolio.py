@@ -146,23 +146,7 @@ PROJECTS = {
                     "project_file": "docs/analyse_explo.pdf"
                    
                     
-                },
-
-
-# R SHINY  -----------------------------------------------------------------------------------------
-
-            "viz memoire": {
-                        "title": "Application R-Shiny : visualisation des prévisions de fréquentation touristique en France",
-                        "date": "Juin2026",
-                        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                        "image": "img/projet7.jpg",
-                        "skills": ["R-Shiny", "Data-Viz"],
-                        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Autoévaluation : projet abouti, bonne maîtrise des modèles SARIMA, marge d'amélioration sur l'automatisation du pipeline.",
-                        "data_origin": "INSEE",
-                        "data_file": "data/data_memoire.csv",
-                        "project_file": "docs/nuitees_projet.pdf",
-                        "synthesis_file": "docs/nuitees_synthese.pdf"
-                                }
+                }
 }
 
 @app.route("/")
