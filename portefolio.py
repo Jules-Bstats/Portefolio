@@ -72,11 +72,21 @@ PROJECTS = {
 # POWER BI -----------------------------------------------------------------------------------------
     "dashboard": {
         "title": "Dashboard Power BI",
-        "date": "Mars 2025",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "date": "Mars 2026",
+        "summary": """
+        L'objectif de ce dashboard fait à partir du logiciel Power BI est de créer un outil de pilotage des performances opérationnel 
+        d'une entreprise fictif (ici, Gruezilla & co, spécialisé dans la location d'engin de levage). Pour cela, des données ont été 
+        généré par intelligence artificielle puis re-vérifié à la main pour s'assurer de la pertinence de celles-ci. Après avoir 
+        contrôler le type des variables sur Power Query, les données ont été modélisé sous la forme d'un schéma en étoile. L'étape 
+        d'après a été de créer un ensemble de KPIs (CA, taux de sorti de parc ...) en DAX pour suivre les performances de l'entreprise.
+        Les différents indicateurs ont été réparti sur différentes pages pour former un dashboard cohérent et qui correspond aux différents métiers de l'entreprise.
+        """,
         "image": "img/projet2.jpg",
         "skills": ["PowerBI", "Data-Viz", "DAX"],
-        "comment": "Lorem ipsum dolor sit amet. Autoévaluation : bonne prise en main de Power BI, à approfondir sur les mesures DAX complexes.",
+        "comment": """Étant donné que les données sont fictives, certains indicateurs se sont révélés peu cohérents, ce qui peut créer une différence
+        majeur avec une entreprise réelle où des fins changements peuvent se réveler très important dans la prise de décision. Outre, la cohérence qui peut faire défaut, 
+        il est difficile de construire un tableau de bord opérationnel sans connaître les métiers de l'entreprise. Ainsi, certains indicateurs nous ont paru être
+        pertinent mais ne le sont peut être pas dans la réalité.""",
         "data_origin": "Simulation de données via IA générative",
                 "project_link": "https://app.powerbi.com/links/rLNg-HaM9c?ctid=3e08a669-4292-42cb-aaff-083b43a0d551&pbi_source=linkShare",
                 "synthesis_file": "docs/note_synthese_bi.pdf"
@@ -98,8 +108,10 @@ PROJECTS = {
                 plus performante pour estimer les variables quantitatives comme les salaires, tandis que l'approche par tendances observées fonctionne mieux pour les qualitatives.  """,
             "image": "img/projet3.jpg",
             "skills": ["R", "Imputation", "Nettoyage", "Analyse Exploratoire"],
-            "comment": """L'auto-critique met toutefois en lumière la complexité inhérente 
-                l'imputation de telles bases issues d'enquêtes, particulièrement lorsque la majorité des variables sont qualitatives et possèdent de multiples modalirés.""",
+            "comment": """Il est particulièrement difficile de traiter les valeurs manquantes dans des bases de données issues d'enquêtes.
+            La présence de variables qualitatives avec de multiples modalités non ordonnées rend l'imputation complexe. En effet, nous ne pouvons nous appuyer que sur 
+            un petit nombre de variables pour trouver des caractéristiques communes entre les individus et ainsi estimer les valeurs manquantes. 
+            """,
             "data_origin": "Etalab",
             "data_link": "https://www.data.gouv.fr/datasets/sondage-metiers-du-numerique-et-service-public-1",
                 "project_file": "docs/biostat.pdf"        
@@ -110,11 +122,28 @@ PROJECTS = {
         "brocolis": {
                 "title": "Prévision du prix du brocoli aux USA",
                 "date": "Septembre 2025",
-                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "summary": """
+                    Ce projet  étudie la dynamique et la prévision du prix du brocoli sur le marché américain entre 2000 et 2020. 
+                    La problématique cherche à évaluer si l'intégration de variables climatiques et économiques permet d'améliorer 
+                    la prévision de cette série à un horizon de douze mois. Pour répondre à cette question, l’étude mobilise 
+                    une analyse exploratoire des séries temporelles, des méthodes de détection des points atypiques, des transformations de 
+                    stationnarité par log-différenciation, ainsi que des techniques de sélection automatique de variables comme BestSubSet et GETS. 
+                    """,
+                "summary_bottom": """
+                    Les résultats importants montrent que les chocs de prix sont principalement d'origine climatique et que les variables explicatives apportent une plus-value très 
+                    faible. Les modèles linéaires testés, à savoir ARX, ARIMA et OLS, génèrent des prévisions similaires qui convergent vers la moyenne historique en s'estompant rapidement. 
+                    Cependant, les tests de Diebold-Mariano confirment que ces modèles surpassent significativement un modèle naïf avec un R2 out-of-sample d'environ 0.72, bien qu'aucun 
+                    modèle ne se distingue nettement des autres. 
+                    """,
                 "image": "img/projet5.jpg",
                 "skills": ["R", "Prévision", "Série temporelle"],
-                "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Autoévaluation : projet abouti, bonne maîtrise des modèles SARIMA, marge d'amélioration sur l'automatisation du pipeline.",
-                "data_origin": "FED",
+                "comment": """ 
+                    Les transformations de stationnarité gomment les retards de transmission et l'inadéquation des approches linéaires face à une
+                      forte volatilité mensuelle. Pour améliorer ces travaux, il conviendrait d'intégrer des modèles à volatilité conditionnelle 
+                      de type GARCH pour capter l'hétéroscédasticité des résidus ou d'explorer des méthodes non linéaires et d'apprentissage 
+                      automatique plus adaptées aux dynamiques complexes des marchés agricoles.
+                    """,
+                "data_origin": "FRED",
                 "data_file": "data/base_brocoli.csv",
                 "project_file": "docs/brocoli.pdf"
             },
@@ -127,9 +156,9 @@ PROJECTS = {
                                 démographiques et sanitaires""",
                     "date": "Février 2026",
                     "summary": """ Ce projet d'analyse de données vise à étudier les inégalités macroéconomiques, sanitaires et démographiques entre 167 pays, à partir d'une base de données Kaggle enrichie de deux variables 
-                    qualitatives représentant le niveau de développement et la région géographique. La démarche méthodologique s'appuie d'abord sur des analyses descriptives univariées et bivariées utilisant des matrices de 
-                    corrélation de Spearman, des analyses de variance (ANOVA) et des tests du Khi-2. Les auteurs utilisent ensuite des méthodes d'analyse multidimensionnelle, plus précisément une Analyse Factorielle des Correspondances
-                      (AFC) et une Analyse en Composantes Principales (ACP) suivie d'une classification, pour modéliser la structure globale des disparités mondiales. """,
+                    qualitatives représentant le niveau de développement et la région géographique. La démarche méthodologique s'appuie d'abord sur des analyses descriptives univariées et bivariées utilisant des matrices de  corrélation de Spearman, 
+                    des analyses de variance (ANOVA) et des tests du Khi-2. Ensuite plusieurs méthodes d'analyse multidimensionnelle : une Analyse Factorielle des Correspondances (AFC) et une Analyse 
+                    en Composantes Principales (ACP) suivie d'une classification, pour modéliser la structure globale des disparités mondiales. """,
                       "summary_bottom":"""Les résultats démontrent une polarisation extrême des conditions de vie à l'échelle mondiale, l'espérance de vie étant très fortement corrélée de manière positive au revenu et de manière négative 
                       à la mortalité infantile ou à la fécondité. L'AFC met en évidence une structure hiérarchisée opposant diamétralement l'Afrique sous-développée à l'Europe développée, avec l'Amérique et l'Asie dans des positions de 
                       transition. L'ACP et la classification finale confirment cette fracture structurelle en regroupant les nations en trois profils distincts, séparant très nettement les pays européens riches à forte qualité de vie, 
