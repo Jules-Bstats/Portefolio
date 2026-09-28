@@ -74,17 +74,17 @@ PROJECTS = {
         "title": "Dashboard Power BI",
         "date": "Mars 2026",
         "summary": """
-        L'objectif de ce dashboard fait à partir du logiciel Power BI est de créer un outil de pilotage des performances opérationnel 
-        d'une entreprise fictif (ici, Gruezilla & co, spécialisé dans la location d'engin de levage). Pour cela, des données ont été 
-        généré par intelligence artificielle puis re-vérifié à la main pour s'assurer de la pertinence de celles-ci. Après avoir 
-        contrôler le type des variables sur Power Query, les données ont été modélisé sous la forme d'un schéma en étoile. L'étape 
+        L'objectif de ce dashboard fait à partir du logiciel Power BI est de créer un outil de pilotage des performances opérationnels 
+        d'une entreprise fictive (ici, Gruezilla & co, spécialisé dans la location d'engin de levage). Pour cela, des données ont été 
+        généré par intelligence artificielle puis re-vérifiées à la main pour s'assurer de la pertinence de celles-ci. Après avoir 
+        contrôlé le type des variables sur Power Query, les données ont été modélisées sous la forme d'un schéma en étoile. L'étape 
         d'après a été de créer un ensemble de KPIs (CA, taux de sorti de parc ...) en DAX pour suivre les performances de l'entreprise.
-        Les différents indicateurs ont été réparti sur différentes pages pour former un dashboard cohérent et qui correspond aux différents métiers de l'entreprise.
+        Les différents indicateurs ont été répartis sur différentes pages pour former un dashboard cohérent et qui correspond aux différents métiers de l'entreprise.
         """,
         "image": "img/projet2.jpg",
         "skills": ["PowerBI", "Data-Viz", "DAX"],
         "comment": """Étant donné que les données sont fictives, certains indicateurs se sont révélés peu cohérents, ce qui peut créer une différence
-        majeur avec une entreprise réelle où des fins changements peuvent se réveler très important dans la prise de décision. Outre, la cohérence qui peut faire défaut, 
+        majeure avec une entreprise réelle où des fins changements peuvent se réveler très important dans la prise de décision. Hormis cela, la cohérence qui peut faire défaut, 
         il est difficile de construire un tableau de bord opérationnel sans connaître les métiers de l'entreprise. Ainsi, certains indicateurs nous ont paru être
         pertinent mais ne le sont peut être pas dans la réalité.""",
         "data_origin": "Simulation de données via IA générative",
@@ -96,7 +96,7 @@ PROJECTS = {
 
 
     "Nettoyage": {
-            "title": "Analyse de l'attractivité du numérique dans la fonction publiquue : nettoyage et imputation de valeurs manquantes",
+            "title": "Analyse de l'attractivité du numérique dans la fonction publique : nettoyage et imputation de valeurs manquantes",
             "date": "Novembre 2025",
             "summary": """
                 Dans le cadre d’un projet de biostatistique réalisé en binôme sur une enquête d'Etalab, l’objectif était d’analyser l’attractivité des métiers du numérique dans la fonction publique et de 
@@ -156,7 +156,7 @@ PROJECTS = {
                                 démographiques et sanitaires""",
                     "date": "Février 2026",
                     "summary": """ Ce projet d'analyse de données vise à étudier les inégalités macroéconomiques, sanitaires et démographiques entre 167 pays, à partir d'une base de données Kaggle enrichie de deux variables 
-                    qualitatives représentant le niveau de développement et la région géographique. La démarche méthodologique s'appuie d'abord sur des analyses descriptives univariées et bivariées utilisant des matrices de  corrélation de Spearman, 
+                    qualitatives représentant le niveau de développement et la région géographique. La démarche méthodologique s'appuie d'abord sur des analyses descriptives univariées et bivariées utilisant des matrices de corrélation de Spearman, 
                     des analyses de variance (ANOVA) et des tests du Khi-2. Ensuite plusieurs méthodes d'analyse multidimensionnelle : une Analyse Factorielle des Correspondances (AFC) et une Analyse 
                     en Composantes Principales (ACP) suivie d'une classification, pour modéliser la structure globale des disparités mondiales. """,
                       "summary_bottom":"""Les résultats démontrent une polarisation extrême des conditions de vie à l'échelle mondiale, l'espérance de vie étant très fortement corrélée de manière positive au revenu et de manière négative 
@@ -167,7 +167,7 @@ PROJECTS = {
                     "skills": ["R", "ACP", "Clustering", "Analyse Exploratoire"],
                     "comment": """L'étude présente toutefois plusieurs limites méthodologiques, notamment la suppression arbitraire des variables liées aux importations et aux dépenses de santé pour forcer la pertinence de l'ACP, ce qui 
                     ampute le modèle d'informations socio-économiques potentiellement révélatrices. De plus, la gestion des valeurs extrêmes reste discutable car si le Luxembourg a été retiré de l'analyse principale pour éviter d'écraser 
-                    es résultats, d'autres pays aux revenus atypiques comme Singapour ou le Qatar ont été conservés, ce qui rend l'interprétation du deuxième axe de l'ACP particulièrement confuse et contre-intuitive selon les auteurs eux-mêmes. 
+                    les résultats, d'autres pays aux revenus atypiques comme Singapour ou le Qatar ont été conservés, ce qui rend l'interprétation du deuxième axe de l'ACP particulièrement confuse et contre-intuitive selon les auteurs eux-mêmes. 
                     Enfin, l'utilisation d'un nombre aussi restreint d'indicateurs limite structurellement la capacité du modèle"
                     final à capter l'entière complexité des inégalités de développement dans le monde. """,
                     "data_origin": "Kaggle",

@@ -1,4 +1,5 @@
 MODIFICATIONS À APPORTER : 
-- ajouter une vignette stata 
-- reprendre l'esthétique global de l'app 
--  
+
+- reprendre la page détail projet 
+- ajouter des compétences pour les différents projets 
+- 
